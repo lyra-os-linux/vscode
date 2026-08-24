@@ -7,6 +7,8 @@ URL:            https://github.com/lyra-os-linux/vscode
 Source0:        vscode.repo
 BuildArch:      noarch
 Requires:       distribution-gpg-keys
+# Owns /etc/zypp/repos.d, which this package installs into.
+Requires:       zypper
 
 %description
 Registers Microsoft's official Visual Studio Code Zypper repository
