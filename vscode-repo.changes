@@ -1,0 +1,8 @@
+-------------------------------------------------------------------
+Mon Aug 24 12:00:00 UTC 2026 - Lyra OS Release <rodrigo@lyraos.com.br>
+
+- Register Microsoft's official Visual Studio Code Zypper repository,
+  trusted through the microsoft key that distribution-gpg-keys ships.
+- Ship no VS Code binary: Microsoft's EULA does not allow redistributing
+  their official build, so this package only makes `zypper install code`
+  resolve against packages.microsoft.com.

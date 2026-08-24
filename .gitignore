@@ -1,0 +1,11 @@
+# RPM build artifacts
+*.rpm
+*.src.rpm
+
+# Python bytecode cache
+__pycache__/
+*.pyc
+
+# Logs and temp files
+*.log
+.DS_Store
