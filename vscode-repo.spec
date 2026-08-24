@@ -8,7 +8,7 @@ Source0:        vscode.repo
 BuildArch:      noarch
 Requires:       distribution-gpg-keys
 # Owns /etc/zypp/repos.d, which this package installs into.
-Requires:       zypper
+Requires:       libzypp
 
 %description
 Registers Microsoft's official Visual Studio Code Zypper repository
