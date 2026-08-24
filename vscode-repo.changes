@@ -6,4 +6,5 @@ Mon Aug 24 12:00:00 UTC 2026 - Lyra OS Release <rodrigo@lyraos.com.br>
 - Ship no VS Code binary: Microsoft's EULA does not allow redistributing
   their official build, so this package only makes `zypper install code`
   resolve against packages.microsoft.com.
-- Declare Requires: libzypp, which owns /etc/zypp/repos.d.
+- Declare %dir ownership of /etc/zypp and /etc/zypp/repos.d directly
+  (neither zypper nor libzypp actually owns them via RPM metadata).
