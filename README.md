@@ -14,10 +14,22 @@ ships at `/usr/share/distribution-gpg-keys/microsoft/microsoft.gpg`. VS Code
 itself is installed, updated and signed entirely by Microsoft.
 
 - `vscode.repo`: the Zypper repository definition, with metadata and
-  package GPG verification both enabled;
+  package GPG verification both enabled e prioridade de terceiros `90`;
 - `vscode-repo.spec`: installs `vscode.repo` to `/etc/zypp/repos.d/` as a
   `%config(noreplace)` file and asserts its key settings at build time;
 - `vscode-repo.changes`: RPM changelog.
+
+## Validação
+
+Em cada push para `main` e pull request, o CI executa:
+
+```sh
+python3 -m unittest discover -s tests -v
+rpmspec -P vscode-repo.spec >/dev/null
+```
+
+Os testes verificam a URL HTTPS oficial, a chave esperada, `gpgcheck`,
+`repo_gpgcheck`, prioridade e instalação/remoção idempotentes do arquivo.
 
 ## Credits
 

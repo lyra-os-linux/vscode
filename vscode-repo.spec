@@ -31,6 +31,7 @@ grep -qxF 'gpgkey=file:///usr/share/distribution-gpg-keys/microsoft/microsoft.gp
     %{buildroot}%{_sysconfdir}/zypp/repos.d/vscode.repo
 grep -qxF 'gpgcheck=1' %{buildroot}%{_sysconfdir}/zypp/repos.d/vscode.repo
 grep -qxF 'repo_gpgcheck=1' %{buildroot}%{_sysconfdir}/zypp/repos.d/vscode.repo
+grep -qxF 'priority=90' %{buildroot}%{_sysconfdir}/zypp/repos.d/vscode.repo
 
 %files
 %dir %{_sysconfdir}/zypp
